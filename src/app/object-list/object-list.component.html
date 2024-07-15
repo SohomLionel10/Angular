@@ -1,0 +1,42 @@
+<table>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Color</th>
+            <th>Capacity</th>
+            <th>Price</th>
+            <th>Generation</th>
+            <th>Year</th>
+            <th>CPUmodel</th>
+            <th>hardDiskSize</th>
+            <th>strapColour</th>
+            <th>caseSize</th>
+            <th>description</th>
+            <th>screenSize</th>
+            <th>Capacity</th>
+            <th>Generation</th>
+            <th>Price</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let prdcts of products">
+            <td>{{ prdcts.name }}</td>
+            <ng-container *ngFor="let item of prdcts.data">
+                <td>{{ item.color || 'NA' }}</td>
+                <td>{{ item.capacity || 'NA' }}</td>
+                <td>{{ item.price || 'NA' }}</td>
+                <td>{{ item.generation || 'NA' }}</td>
+                <td>{{ item.year || 'NA' }}</td>
+                <td>{{ item.CPUmodel || 'NA' }}</td>
+                <td>{{ item.hardDiskSize || 'NA' }}</td>
+                <td>{{ item.strapColour || 'NA' }}</td>
+                <td>{{ item.caseSize || 'NA' }}</td>
+                <td>{{ item.description || 'NA' }}</td>
+                <td>{{ item.screenSize || 'NA' }}</td>
+                <td>{{ item.Capacity || 'NA' }}</td>
+                <td>{{ item.Generation || 'NA' }}</td>
+                <td>{{ item.Price || 'NA' }}</td>
+            </ng-container>
+        </tr>
+    </tbody>    
+</table>
